@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #f0f0f0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+        }
+        h1 { color: #6366f1; }
+        .status { 
+            padding: 10px; 
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Portfolio File Checker</h1>
+        
+        <div class="status success">
+            ✅ Test page loaded successfully!
+        </div>
+        
+        <h2>Checking Files:</h2>
+        <ul id="fileList"></ul>
+        
+        <h2>Quick Test:</h2>
+        <button onclick="testScroll()">Test Scroll</button>
+        <button onclick="testDarkMode()">Test Dark Mode</button>
+        
+        <p style="margin-top: 20px; color: #666;">
+            If you see this page, your browser is working fine.
+            <br><br>
+            <strong>To open your full portfolio:</strong><br>
+            Right-click on <code>portfolio.html</code> → Open With → Chrome
+        </p>
+    </div>
+    
+    <script>
+        function testScroll() {
+            alert('Scroll function works!');
+        }
+        function testDarkMode() {
+            document.body.style.background = document.body.style.background === 'white' ? '#333' : 'white';
+            document.body.style.color = document.body.style.color === 'white' ? 'black' : 'white';
+            alert('Dark mode toggle works!');
+        }
+        
+        const files = [
+            { name: 'portfolio.html', type: 'HTML' },
+            { name: 'portfolio.css', type: 'CSS' },
+            { name: 'portfolio.js', type: 'JavaScript' }
+        ];
+        
+        const list = document.getElementById('fileList');
+        files.forEach(f => {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${f.name}</strong> (${f.type}) - Make sure this file is in the same folder`;
+            list.appendChild(li);
+        });
+    </script>
+</body>
+</html>

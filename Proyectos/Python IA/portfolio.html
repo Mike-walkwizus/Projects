@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timanoki - Desarrollador Full Stack</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Mouse Trail -->
+    <div id="mouseTrail"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">▲</span>
+                <span>Timanoki</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Sobre Mí</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title neon-glow">Hola, soy <span class="highlight">Timanoki</span></h1>
+            <p class="hero-subtitle">Desarrollador Full Stack y Codificador Creativo</p>
+            <p class="hero-description">Construyendo aplicaciones web modernas y soluciones inteligentes con Python, JavaScript y tecnologías de vanguardia.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary glow-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Ponte en Contacto</button>
+                <button class="btn btn-secondary glow-button" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">Ver Mi Trabajo</button>
+            </div>
+        </div>
+        <div class="hero-animation">
+            <!-- 3D Cube -->
+            <div class="cube-container">
+                <div class="cube">
+                    <div class="cube-face cube-front">⚡</div>
+                    <div class="cube-face cube-back">💻</div>
+                    <div class="cube-face cube-right">🚀</div>
+                    <div class="cube-face cube-left">🎨</div>
+                    <div class="cube-face cube-top">✨</div>
+                    <div class="cube-face cube-bottom">🔥</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Soy un desarrollador apasionado con amor por crear soluciones elegantes a problemas complejos. Con experiencia tanto en frontend como en backend, construyo aplicaciones full-stack que son intuitivas, escalables y hermosas.</p>
+                    <p>Comenzando con proyectos de IA y juegos, he evolucionado hacia la construcción de soluciones web completas. Estoy constantemente aprendiendo nuevas tecnologías y buenas prácticas para mantenerme a la vanguardia del desarrollo web.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Proyectos</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Tecnologías</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Dedicación</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">💻</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <div class="image-placeholder-project">🎮</div>
+                            </div>
+                            <h3>Juego IA - Piedra, Papel o Tijeras</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-content">
+                                <h3>Juego IA - Piedra, Papel o Tijeras</h3>
+                                <p>Oponente de IA inteligente que aprende de los patrones del jugador y adapta su estrategia en tiempo real.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">IA</span>
+                                    <span class="tag">Juego</span>
+                                </div>
+                                <a href="#" class="project-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <div class="image-placeholder-project">🤖</div>
+                            </div>
+                            <h3>Bot de Chat para Twitch</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-content">
+                                <h3>Bot de Chat para Twitch</h3>
+                                <p>Bot completo con comandos, moderación, sistema de puntos y juegos interactivos para streamers.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Twitch API</span>
+                                    <span class="tag">Bot</span>
+                                </div>
+                                <a href="#" class="project-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <div class="image-placeholder-project">🌐</div>
+                            </div>
+                            <h3>Portafolio Personal</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-content">
+                                <h3>Portafolio Personal</h3>
+                                <p>Sitio web moderno y responsivo que muestra proyectos y habilidades con animaciones suaves.</p>
+                                <div class="project-tags">
+                                    <span class="tag">HTML/CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                    <span class="tag">Responsivo</span>
+                                </div>
+                                <a href="#" class="project-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <div class="image-placeholder-project">📊</div>
+                            </div>
+                            <h3>Herramienta de Análisis de Datos</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-content">
+                                <h3>Herramienta de Análisis de Datos</h3>
+                                <p>Herramienta en Python para analizar y visualizar datos con gráficos e informes interactivos.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Datos</span>
+                                    <span class="tag">Pandas</span>
+                                </div>
+                                <a href="#" class="project-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <div class="image-placeholder-project">⚙️</div>
+                            </div>
+                            <h3>Servicio API REST</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-content">
+                                <h3>Servicio API REST</h3>
+                                <p>API REST escalable construida con Flask que incluye autenticación e integración con base de datos.</p>
+                                <div class="project-tags">
+                                    <span class="tag">Flask</span>
+                                    <span class="tag">API</span>
+                                    <span class="tag">Backend</span>
+                                </div>
+                                <a href="#" class="project-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="project-image">
+                                <div class="image-placeholder-project">🎨</div>
+                            </div>
+                            <h3>Biblioteca de Componentes UI</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="project-content">
+                                <h3>Biblioteca de Componentes UI</h3>
+                                <p>Componentes reutilizables de React con TypeScript y documentación en Storybook.</p>
+                                <div class="project-tags">
+                                    <span class="tag">React</span>
+                                    <span class="tag">TypeScript</span>
+                                    <span class="tag">Componentes</span>
+                                </div>
+                                <a href="#" class="project-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with 3D Cube -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades y Herramientas</h2>
+            
+            <!-- 3D Rotating Cube -->
+            <div class="skills-cube-wrapper">
+                <div class="skills-cube">
+                    <div class="cube-skill-face front">
+                        <h3>Lenguajes</h3>
+                        <div class="skill-items-cube">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="cube-skill-face back">
+                        <h3>Frontend</h3>
+                        <div class="skill-items-cube">
+                            <span>React</span>
+                            <span>CSS3</span>
+                            <span>Animaciones</span>
+                        </div>
+                    </div>
+                    <div class="cube-skill-face right">
+                        <h3>Backend</h3>
+                        <div class="skill-items-cube">
+                            <span>Flask</span>
+                            <span>Node.js</span>
+                            <span>APIs</span>
+                        </div>
+                    </div>
+                    <div class="cube-skill-face left">
+                        <h3>Herramientas</h3>
+                        <div class="skill-items-cube">
+                            <span>Git</span>
+                            <span>Docker</span>
+                            <span>Linux</span>
+                        </div>
+                    </div>
+                    <div class="cube-skill-face top">
+                        <h3>Base de Datos</h3>
+                        <div class="skill-items-cube">
+                            <span>SQL</span>
+                            <span>MongoDB</span>
+                            <span>Diseño</span>
+                        </div>
+                    </div>
+                    <div class="cube-skill-face bottom">
+                        <h3>DevOps</h3>
+                        <div class="skill-items-cube">
+                            <span>AWS</span>
+                            <span>CI/CD</span>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category glassmorphism">
+                    <h3>Lenguajes</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">SQL</span>
+                        <span class="skill-item">TypeScript</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glassmorphism">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">React</span>
+                        <span class="skill-item">Diseño Responsivo</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">Flexbox/Grid</span>
+                        <span class="skill-item">Animaciones</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glassmorphism">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Flask</span>
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">REST API</span>
+                        <span class="skill-item">Diseño de Bases de Datos</span>
+                        <span class="skill-item">Autenticación</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glassmorphism">
+                    <h3>Herramientas y Plataformas</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">VS Code</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">Figma</span>
+                        <span class="skill-item">Linux</span>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ponte en Contacto</h2>
+            <p class="contact-subtitle">Siempre me interesa conocer nuevos proyectos y oportunidades.</p>
+            
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Tu Correo" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <h4>Email</h4>
+                        <p>marchand.mike29@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💬</span>
+                        <h4>Discord</h4>
+                        <p>timanokii</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <h4>Ubicación</h4>
+                        <p>Acacias, Madrid</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Timanoki</h3>
+                    <p>Desarrollador Full Stack apasionado por crear experiencias digitales increíbles.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#about">Sobre Mí</a></li>
+                        <li><a href="#projects">Proyectos</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sígueme</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">GitHub</a>
+                        <a href="#" class="social-icon">Twitter</a>
+                        <a href="#" class="social-icon">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Timanoki. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
